@@ -10,12 +10,12 @@ Here is the list of operations that can be performed with this api:
 - Delete a user data (DELETE)
 
 ## Get all users data (READ)
-To get all users data, send a **GET** request to the endpoint `https://hng-crud-api.vercel.app/api/`.
+To get all users data, send a **GET** request to the endpoint `https://hng-crud-api.vercel.app/api`.
 Here is an example written in python:
 ```
 import requests
 
-url = "https://hng-crud-api.vercel.app/api/"
+url = "https://hng-crud-api.vercel.app/api"
 response = requests.get(url)
 print(response.text)
 ```
@@ -46,12 +46,12 @@ Here is what the expected result should look like:
 ]
 ```
 ## Get a user data (READ)
-To get a user data, send a **GET** request to endpoint: `https://hng-crud-api.vercel.app/api/<user_id>/`. Replace <user_id> with the *id* of the user.
+To get a user data, send a **GET** request to endpoint: `https://hng-crud-api.vercel.app/api/<user_id>`. Replace <user_id> with the *id* of the user.
 Here is an example written in python:
 ```
 import requests
 
-url = "https://hng-crud-api.vercel.app/api/2/"
+url = "https://hng-crud-api.vercel.app/api/2"
 response = requests.get(url)
 print(response.text)
 
@@ -64,7 +64,7 @@ Here is what the expected result should look like:
 }
 ```
 ## Create a user data (CREATE)
-To create a user data, send a **POST** request to endpoint: `https://hng-crud-api.vercel.app/api/`.
+To create a user data, send a **POST** request to endpoint: `https://hng-crud-api.vercel.app/api`.
 The request body must contain name of the user, that is:
 | Required Field | Description
 | ----------- | ----------- |
@@ -74,7 +74,7 @@ Here is an example written in python:
 ```
 import requests
 
-url = "https://hng-crud-api.vercel.app/api/"
+url = "https://hng-crud-api.vercel.app/api"
 payload = {"name": "John Doe"}
 response = requests.post(url, data=payload)
 print(response.text)
@@ -87,7 +87,7 @@ Here is what the expected result should look like:
 }
 ```
 ## Update a user data (UPDATE)
-To update a user data, send a **PUT** request to endpoint: `https://hng-crud-api.vercel.app/api/<user_pk>/`. Replace <user_id> with the *id* of the user you want to update.
+To update a user data, send a **PUT** request to endpoint: `https://hng-crud-api.vercel.app/api/<user_pk>`. Replace <user_id> with the *id* of the user you want to update.
 The request body must contain the name of the user which you want to update, that is:
 | Required Field | Description
 | ----------- | ----------- |
@@ -97,7 +97,7 @@ Here is an example written in python
 ```
 import requests
 
-url = "https://hng-crud-api.vercel.app/api/22/"
+url = "https://hng-crud-api.vercel.app/api/22"
 payload = {"name": "Mark"}
 response = requests.put(url, data=payload)
 print(response.text)
@@ -115,6 +115,6 @@ Here is an example written in python
 ```
 import requests
 
-url = "https://hng-crud-api.vercel.app/api/22/"
+url = "https://hng-crud-api.vercel.app/api/22"
 response = requests.delete(url)
 ```
