@@ -8,14 +8,14 @@ from django.urls import path
 # urlpatterns = router.urls
 
 urlpatterns = [
-	path('api', PersonViewset.as_view({'get': 'list'})),
-	path('api/<int:pk>', PersonViewset.as_view({'get': 'retrieve'})),
-	path('api', PersonViewset.as_view({'post': 'create'})),
-	path('api/<int:pk>', PersonViewset.as_view({'put': 'update'})),
-	path('api/<int:pk>', PersonViewset.as_view({'delete': 'destroy'})),
-	path('api/', PersonViewset.as_view({'get': 'list'})),
-	path('api/<int:pk>/', PersonViewset.as_view({'get': 'retrieve'})),
-	path('api/', PersonViewset.as_view({'post': 'create'})),
-	path('api/<int:pk>/', PersonViewset.as_view({'put': 'update'})),
-	path('api/<int:pk>/', PersonViewset.as_view({'delete': 'destroy'})),
+	path('api', PersonViewset.as_view({'get': 'list'}), name='person-list'),
+	path('api/<int:pk>', PersonViewset.as_view({'get': 'retrieve'}), name='person-detail'),
+	path('api', PersonViewset.as_view({'post': 'create'}), name='person-create'),
+	path('api/<int:pk>', PersonViewset.as_view({'put': 'update'}), name='person-update'),
+	path('api/<int:pk>', PersonViewset.as_view({'delete': 'destroy'}), name='person-destroy'),
+	path('api/', PersonViewset.as_view({'get': 'list'}), name='person-list'),
+	path('api/<int:pk>/', PersonViewset.as_view({'get': 'retrieve'}), name='person-detail'),
+	path('api/', PersonViewset.as_view({'post': 'create'}), name='person-create'),
+	path('api/<int:pk>/', PersonViewset.as_view({'put': 'update'}), name='person-update'),
+	path('api/<int:pk>/', PersonViewset.as_view({'delete': 'destroy'}), name='person-destroy'),
 ]
